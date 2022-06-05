@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark App</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Open Model -->
+    <h1 id="showModel">Add Bookmark</h1>
+    <!-- Bookmarks -->
+    <div class="bookmark_container" id="bookmark_container">
+      <!-- <div class="item_container">
+        <i
+          class="fas fa-trash"
+          id="delete_bookmark"
+          title="Delete Bookmark"
+        ></i>
+        <div class="name">
+          <img
+            src="https://www.google.com/s2/favicons?domain_url=https://www.soujanyasatpute.me/"
+            alt="favicon"
+          />
+          <a href="https://www.soujanyasatpute.me/"> Soujanya Satpute </a>
+        </div>
+      </div> -->
+    </div>
+    <!-- Modal -->
+    <div class="modal_container" id="modal_container">
+      <div class="modal">
+        <i class="fas fa-times close-icon" id="close_modal"> </i>
+        <div class="modal_header">
+          <h2>Add Bookmark</h2>
+        </div>
+        <div class="modal_content">
+          <form action="" id="bookmark_form">
+            <!-- Website Name -->
+            <div class="form_group">
+              <label for="website_name" class="form_label">Website Name</label>
+              <input type="text" id="website_name" class="form_input" />
+            </div>
+            <!-- Website Url -->
+            <div class="form_group">
+              <label for="website_url" class="form_label">Website URL</label>
+              <input type="text" id="website_url" class="form_input" />
+            </div>
+            <button type="submit">Save Bookmark</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+    <!-- <script src="./ScriptwithObject.js"></script> -->
+  </body>
+</html>
