@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
+:root {
+  --primaryColor: rgb(255, 255, 255);
+  --borderRadius: 5px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url(./background.jpg);
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1 {
+  color: white;
+  padding: 20px;
+  background-color: rgb(244, 81, 36);
+  border-radius: var(--borderRadius);
+  cursor: pointer;
+  text-transform: uppercase;
+  width: fit-content;
+  margin: 20px auto 10px;
+  user-select: none;
+}
+
+h1:hover {
+  filter: brightness(1.25);
+}
+.bookmark_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item_container {
+  background-color: rgba(255, 253, 252, 0.82);
+  color: white;
+  border-radius: var(--borderRadius);
+  padding: 20px;
+  margin: 10px;
+}
+.item_container:hover {
+  background-color: rgba(255, 253, 252, 0.485);
+}
+
+a {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+a:link,
+a:visited {
+  color: rgb(255, 112, 72);
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+.fa-trash {
+  float: right;
+  cursor: pointer;
+  color: rgb(76, 88, 255);
+  z-index: 5;
+}
+.name {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.name img {
+  height: 20px;
+  width: 20px;
+  margin-right: 7px;
+  vertical-align: sub;
+}
+/* Modal */
+
+.modal_container {
+  background-color: rgba(0, 0, 0, 0.664);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.show_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.72);
+  max-width: 95%;
+  width: 500px;
+  animation: modelOpen 1s;
+}
+
+.close-icon {
+  float: right;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  top: 13px;
+  right: 13px;
+  cursor: pointer;
+  padding: 20px 20px;
+}
+.modal_header {
+  background-color: rgb(244, 81, 36);
+  color: white;
+}
+h2 {
+  margin: 0;
+  padding: 20px 10px;
+}
+.modal_content {
+  background-color: whitesmoke;
+  padding: 30px 10px;
+}
+
+/* Modal Form */
+.form_group {
+  min-height: 55px;
+}
+.form_input {
+  width: 90%;
+  padding: 10px 2px;
+  border-radius: var(--borderRadius);
+  outline: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  display: block;
+}
+.form_label {
+  color: rgba(255, 55, 0, 0.571);
+  font-weight: bold;
+}
+button {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(244, 81, 36);
+  width: fit-content;
+  min-height: 30px;
+  border: none;
+  outline: none;
+  border-radius: var(--borderRadius);
+  margin-top: 20px;
+  padding: 5px 10px;
+}
+button:hover {
+  filter: brightness(1.5);
+}
+@keyframes modelOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Query large smartphone Vertical */
+@media screen and (max-width: 600px) {
+  .bookmark_container {
+    flex-direction: column;
+  }
+  body {
+    background-size: 100% 100%;
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
